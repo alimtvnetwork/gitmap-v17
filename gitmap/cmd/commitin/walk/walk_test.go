@@ -37,7 +37,7 @@ func TestWalkFirstParentReturnsHydratedCommitsInOrder(t *testing.T) {
 func TestWalkFirstParentEmptyRepoReturnsNilSlice(t *testing.T) {
 	restore := SetGitRunnerForTest(func(_, sub string, _ ...string) (string, error) {
 		if sub == "rev-list" {
-			return "fatal: ambiguous argument 'HEAD': unknown revision", errSentinelEmpty{}
+			return "fatal: ambiguous argument 'HEAD': unknown revision", sentinelEmptyError{}
 		}
 		return "", nil
 	})
@@ -51,10 +51,10 @@ func TestWalkFirstParentEmptyRepoReturnsNilSlice(t *testing.T) {
 	}
 }
 
-// errSentinelEmpty mimics a git non-zero exit so isEmptyRepoError fires.
-type errSentinelEmpty struct{}
+// sentinelEmptyError mimics a git non-zero exit so isEmptyRepoError fires.
+type sentinelEmptyError struct{}
 
-func (errSentinelEmpty) Error() string { return "exit status 128" }
+func (sentinelEmptyError) Error() string { return "exit status 128" }
 
 // fakeRunner returns canned output for the three commands the walker
 // issues. SHAs are 3-char placeholders to keep the test compact.

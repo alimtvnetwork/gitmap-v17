@@ -50,7 +50,7 @@ func stripOuterQuotes(s string) string {
 	return s
 }
 
-// classifyKeyword recognises the §2.4 special inputs. Returns
+// classifyKeyword recognizes the §2.4 special inputs. Returns
 // (keyword, tail, isKeyword, err). `tail` is N for "-N" forms (N >= 1).
 // "all" returns tail = 0.
 func classifyKeyword(token string) (string, int, bool, *ParseError) {

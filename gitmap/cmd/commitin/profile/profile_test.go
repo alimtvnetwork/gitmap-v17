@@ -1,6 +1,7 @@
 package profile
 
 import (
+	"errors"
 	"os"
 	"path/filepath"
 	"strings"
@@ -70,15 +71,16 @@ func TestSaveToDiskRefusesOverwrite(t *testing.T) {
 
 func TestLoadFromDiskMissing(t *testing.T) {
 	_, err := LoadFromDisk(t.TempDir(), "Nope")
-	le, ok := err.(*LoadError)
-	if !ok || le.Reason != "not found" {
+	var le *LoadError
+	if !errors.As(err, &le) || le.Reason != "not found" {
 		t.Fatalf("want LoadError not-found, got %v", err)
 	}
 }
 
 func TestProfilePathLayout(t *testing.T) {
-	got := ProfilePath("/root", "Mine")
-	want := filepath.Join("/root", ".gitmap", "commit-in", "profiles", "Mine.json")
+	root := filepath.FromSlash("/root")
+	got := ProfilePath(root, "Mine")
+	want := filepath.Join(root, ".gitmap", "commit-in", "profiles", "Mine.json")
 	if got != want {
 		t.Fatalf("path mismatch: %s vs %s", got, want)
 	}
