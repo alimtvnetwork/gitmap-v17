@@ -148,7 +148,7 @@ func matchSibling(base, name string) (int, bool) {
 		return 0, false
 	}
 	m := versionSuffix.FindStringSubmatch(name)
-	if m == nil || strings.TrimSuffix(name, m[0]) != base {
+	if len(m) == 0 || strings.TrimSuffix(name, m[0]) != base {
 		return 0, false
 	}
 	n, err := strconv.Atoi(m[1])
