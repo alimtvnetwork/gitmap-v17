@@ -12,8 +12,8 @@ import (
 const commitFormat = "%an\x1f%ae\x1f%aI\x1f%cI\x1f%s\x1f%b"
 
 // hydrate populates one SourceCommit by issuing two git calls:
-//   1. `git show -s --format=...` for metadata
-//   2. `git show --name-only --format=` for the file list
+//  1. `git show -s --format=...` for metadata
+//  2. `git show --name-only --format=` for the file list
 func hydrate(repoDir, sha string, orderIndex int) (SourceCommit, error) {
 	meta, err := readCommitMeta(repoDir, sha)
 	if err != nil {

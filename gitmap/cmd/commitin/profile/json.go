@@ -9,22 +9,22 @@ import (
 // jsonShape mirrors spec §5.2 key order exactly. Field tags drive both
 // strict decode (DisallowUnknownFields) and stable encode order.
 type jsonShape struct {
-	Name             string         `json:"Name"`
-	SchemaVersion    int            `json:"SchemaVersion"`
-	SourceRepoPath   string         `json:"SourceRepoPath"`
-	IsDefault        bool           `json:"IsDefault"`
-	ConflictMode     string         `json:"ConflictMode"`
-	Author           *jsonAuthor    `json:"Author,omitempty"`
-	Exclusions       []jsonKV       `json:"Exclusions"`
-	MessageRules     []jsonKV       `json:"MessageRules"`
-	MessagePrefix    []string       `json:"MessagePrefix"`
-	MessageSuffix    []string       `json:"MessageSuffix"`
-	TitlePrefix      string         `json:"TitlePrefix"`
-	TitleSuffix      string         `json:"TitleSuffix"`
-	OverrideMessages []string       `json:"OverrideMessages"`
-	OverrideOnlyWeak bool           `json:"OverrideOnlyWeak"`
-	WeakWords        []string       `json:"WeakWords"`
-	FunctionIntel    jsonFuncIntel  `json:"FunctionIntel"`
+	Name             string        `json:"Name"`
+	SchemaVersion    int           `json:"SchemaVersion"`
+	SourceRepoPath   string        `json:"SourceRepoPath"`
+	IsDefault        bool          `json:"IsDefault"`
+	ConflictMode     string        `json:"ConflictMode"`
+	Author           *jsonAuthor   `json:"Author,omitempty"`
+	Exclusions       []jsonKV      `json:"Exclusions"`
+	MessageRules     []jsonKV      `json:"MessageRules"`
+	MessagePrefix    []string      `json:"MessagePrefix"`
+	MessageSuffix    []string      `json:"MessageSuffix"`
+	TitlePrefix      string        `json:"TitlePrefix"`
+	TitleSuffix      string        `json:"TitleSuffix"`
+	OverrideMessages []string      `json:"OverrideMessages"`
+	OverrideOnlyWeak bool          `json:"OverrideOnlyWeak"`
+	WeakWords        []string      `json:"WeakWords"`
+	FunctionIntel    jsonFuncIntel `json:"FunctionIntel"`
 }
 
 type jsonAuthor struct {
