@@ -31,7 +31,7 @@ func TestParseSeparatorEquivalenceAC1(t *testing.T) {
 	}
 }
 
-// AC #4 — `all` and `-N` are recognised as keywords; mixing them with
+// AC #4 — `all` and `-N` are recognized as keywords; mixing them with
 // explicit inputs is a hard error. Also covers the spec §2.4 grammar
 // rule that a KEYWORD must appear ALONE.
 func TestParseKeywordsAC4(t *testing.T) {

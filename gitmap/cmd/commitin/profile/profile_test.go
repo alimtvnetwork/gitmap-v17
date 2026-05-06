@@ -1,6 +1,7 @@
 package profile
 
 import (
+	"errors"
 	"os"
 	"path/filepath"
 	"strings"
@@ -77,8 +78,9 @@ func TestLoadFromDiskMissing(t *testing.T) {
 }
 
 func TestProfilePathLayout(t *testing.T) {
-	got := ProfilePath("/root", "Mine")
-	want := filepath.Join("/root", ".gitmap", "commit-in", "profiles", "Mine.json")
+	root := filepath.FromSlash("/root")
+	got := ProfilePath(root, "Mine")
+	want := filepath.Join(root, ".gitmap", "commit-in", "profiles", "Mine.json")
 	if got != want {
 		t.Fatalf("path mismatch: %s vs %s", got, want)
 	}

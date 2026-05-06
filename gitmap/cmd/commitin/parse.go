@@ -131,7 +131,7 @@ func splitFlagsAndPositional(args []string) ([]string, []string) {
 	return flags, positional
 }
 
-// isTailKeywordToken recognises the spec §2.4 `-N` tail keyword so the
+// isTailKeywordToken recognizes the spec §2.4 `-N` tail keyword so the
 // flag re-orderer doesn't mistake it for an unknown flag. Any token
 // matching `-` followed by ≥1 ASCII digit qualifies; classifyKeyword
 // re-validates N≥1 and rejects `-0`.
