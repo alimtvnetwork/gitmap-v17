@@ -31,7 +31,28 @@ type RepoBuilder struct {
 func NewRepoBuilder(t *testing.T) *RepoBuilder {
 	t.Helper()
 	skipIfNoGit(t)
-	dir := t.TempDir()
+	return newBuilderInDir(t, t.TempDir())
+}
+
+// NewRepoBuilderAt creates a repo at an explicit path (which is
+// created if missing). Used by sibling-discovery tests that need
+// multiple sibling repos under a shared parent — t.TempDir per call
+// would scatter them across unrelated parents and break the
+// discoverSiblings contract.
+func NewRepoBuilderAt(t *testing.T, dir string) *RepoBuilder {
+	t.Helper()
+	skipIfNoGit(t)
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		t.Fatalf("mkdir %s: %v", dir, err)
+	}
+	return newBuilderInDir(t, dir)
+}
+
+// newBuilderInDir does the actual init + config dance shared by both
+// constructors. Centralized so the two public entry points cannot
+// drift on default branch name or identity.
+func newBuilderInDir(t *testing.T, dir string) *RepoBuilder {
+	t.Helper()
 	rb := &RepoBuilder{
 		t:       t,
 		dir:     dir,
