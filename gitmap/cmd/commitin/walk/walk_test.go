@@ -37,7 +37,7 @@ func TestWalkFirstParentReturnsHydratedCommitsInOrder(t *testing.T) {
 func TestWalkFirstParentEmptyRepoReturnsNilSlice(t *testing.T) {
 	restore := SetGitRunnerForTest(func(_, sub string, _ ...string) (string, error) {
 		if sub == "rev-list" {
-			return "fatal: ambiguous argument 'HEAD': unknown revision", errSentinelEmpty{}
+			return "fatal: ambiguous argument 'HEAD': unknown revision", sentinelEmptyError{}
 		}
 		return "", nil
 	})
