@@ -1,3 +1,19 @@
+- ✅ **Step 6 — Marker, CHANGELOG, helptext audit (2026-05-06).**
+  Verified `gitmap/constants/constants_cli.go` line 3 already
+  carries the file-wide `// gitmap:cmd top-level` marker, so
+  `CmdCommitIn` + `CmdCommitInAlias` (lines 159-160, no `skip` tag)
+  are auto-discovered by the completion generator — no edit needed.
+  `gitmap/cmd/rootcore.go` line 42 already routes both tokens to
+  `runCommitIn(argsTail())`. Helptext at `gitmap/helptext/commit-in.md`
+  is 105 lines, under the 120-line cap. Added a comprehensive
+  v4.18.0 entry to `CHANGELOG.md` covering: command surface,
+  source-resolution rules, input keywords (`all` / `-N`), profile
+  schema + load order + save semantics + `--set-default` atomicity,
+  conflict modes (ForceMerge vs Prompt), `--dry-run` banner,
+  function-intel, message-pipeline order, exclusions, on-disk
+  layout under `<source>/.gitmap/`, and the advisory file lock.
+  `Version` constant in `constants.go` is already at `4.18.0`.
+  `go vet ./...` + `go build ./...` clean.
 - ✅ **Step 5 — Conflict-mode wiring + dry-run banner (2026-05-06).**
   Added `replay/clobber.go` (`DetectClobbers` compares
   `<sha>:path` blob hashes via `git rev-parse` on both source and
