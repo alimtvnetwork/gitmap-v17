@@ -16,3 +16,10 @@ testdata/**         text eol=lf
 
 # Go sources: enforce LF so gofmt / CI gofmt audit isn't fighting CRLF.
 *.go                text eol=lf
+
+# CSV goldens encode the RFC-4180 wire format that encoding/csv emits
+# (CRLF terminators). They are byte-compared via os.ReadFile, so the
+# \r bytes MUST survive checkout on every platform. Mark them binary
+# so the broader `testdata/** text eol=lf` rule above does not strip
+# the \r and re-introduce the "off by one byte per line" golden drift.
+**/testdata/*.csv   binary
