@@ -31,17 +31,20 @@ func TestRepoBuilderProducesDeterministicSHAs(t *testing.T) {
 // DB on disk); per-stage row-level assertions land in Steps 9-12 to
 // keep this scaffolding test stable while the matrix expands.
 func TestE2ESmokeOrchestratorRunsAgainstRealRepo(t *testing.T) {
-	rb := NewRepoBuilder(t)
-	rb.SeedCommit("README.md", "hello\n", "initial commit")
-	rb.SeedCommit("main.go", "package main\n", "add main")
+	source := NewRepoBuilder(t)
+	source.SeedCommit("README.md", "source seed\n", "source: initial")
+
+	input := NewRepoBuilder(t)
+	input.SeedCommit("README.md", "input seed\n", "input: initial")
+	input.SeedCommit("main.go", "package main\n", "input: add main")
 
 	raw := &commitin.RawArgs{
-		Source:     rb.Dir(),
-		Keyword:    constants.CommitInInputKeywordAll,
+		Source:     source.Dir(),
+		Inputs:     []string{input.Dir()},
 		IsDryRun:   true,
 		IsNoPrompt: true,
 	}
-	res := RunHarness(t, raw, rb.Dir())
+	res := RunHarness(t, raw, source.Dir())
 
 	if res.ExitCode != constants.CommitInExitOk {
 		t.Fatalf("orchestrator exit = %d, want %d\n--- stderr\n%s\n--- stdout\n%s",
