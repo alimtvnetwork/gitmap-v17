@@ -38,7 +38,7 @@ import (
 // rename collapsed every `-v9` token into `-v16` and silently broke
 // the test (rewriter found 0 tokens to bump). See
 // .lovable/memory/issues/2026-05-01-fixrepo-digit-capture-desync.md.
-const fixRepoV9ToV12FixtureBody = `// fixture-stamp: name=fixrepo-v9-to-v12 generation=1 min-current=12 for=v9->v12-width-cross sha=7e1463d1eae6
+const fixRepoV9ToV12FixtureBody = `// fixture-stamp: name=fixrepo-v9-to-v12 generation=1 min-current=12 for=v9->v12-width-cross sha=42793bb7b23d
 module example.com/consumer
 
 require (
