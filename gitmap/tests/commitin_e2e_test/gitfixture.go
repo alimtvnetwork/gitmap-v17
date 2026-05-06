@@ -1,7 +1,6 @@
 package commitin_e2e_test
 
 import (
-	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -144,7 +143,3 @@ func trimNewline(s string) string {
 	}
 	return s
 }
-
-// commaJoin is a tiny formatter used by failure messages. Kept here
-// so harness.go does not pull fmt for one call site.
-func commaJoin(parts []string) string { return fmt.Sprintf("%v", parts) }
