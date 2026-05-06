@@ -24,9 +24,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/stablejson"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/startup"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/stablejson"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/startup"
 )
 
 // startupStatus is the in-memory representation built by the

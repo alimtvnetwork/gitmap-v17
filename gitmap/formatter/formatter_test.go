@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/model"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/model"
 )
 
 // testRecords returns sample data for formatter tests.

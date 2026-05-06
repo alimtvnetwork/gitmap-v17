@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/release"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/release"
 )
 
 // --- Pre-release version tests ---

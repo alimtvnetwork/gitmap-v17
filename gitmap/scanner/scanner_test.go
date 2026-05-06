@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // makeRepo creates a fake repo by mkdir'ing path/.git so the scanner's

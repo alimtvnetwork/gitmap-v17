@@ -32,7 +32,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/startup"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/startup"
 )
 
 // expectedStartupListCSVHeader is the EXACT first-line bytes scripts

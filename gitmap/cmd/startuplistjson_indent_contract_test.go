@@ -21,7 +21,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/startup"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/startup"
 )
 
 // TestStartupListJSONIndent_KeyOrderStableAcrossIndents walks

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // runReplace is the entrypoint for `gitmap replace`. It dispatches into

@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/model"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/model"
 )
 
 // detectCpp checks if a file indicates a C++ project.

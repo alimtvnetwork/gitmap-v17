@@ -24,7 +24,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // ParseFile is the package's only public parser entry point.

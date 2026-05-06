@@ -165,7 +165,7 @@ const (
 
 // Clone-on-missing-path constants.
 const (
-	SourceRepoCloneURL   = "https://github.com/alimtvnetwork/gitmap-v16.git"
+	SourceRepoCloneURL   = "https://github.com/alimtvnetwork/gitmap-v17.git"
 	MsgUpdateCloning     = "\n  ■ Path does not exist. Cloning gitmap source into %s...\n"
 	MsgUpdateCloneOK     = "  ✓ Cloned successfully.\n"
 	ErrUpdateCloneFailed = "  ✗ Clone failed: %v\n"
@@ -200,7 +200,7 @@ try {
 }
 `
 	// UpdatePSDeployDetect format args (in order):
-	//   %[1]s — repo path           (e.g. C:\dev\gitmap-v16)
+	//   %[1]s — repo path           (e.g. C:\dev\gitmap-v17)
 	//   %[2]s — gitmap subdir       (sourceRepoSubdir from manifest)
 	//   %[3]s — app subdir          (appSubdir from manifest, e.g. gitmap-cli)
 	//   %[4]s — binary name         (gitmap.exe)

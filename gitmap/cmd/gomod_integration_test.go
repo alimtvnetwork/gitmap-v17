@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // initTestRepo creates a temporary git repo with an initial commit and returns

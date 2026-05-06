@@ -7,8 +7,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/verbose"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/verbose"
 )
 
 // CreateBranch creates a release branch from the given source ref.

@@ -130,7 +130,7 @@ gitmap mb         LEFT RIGHT [flags]`} />
       <section>
         <h2 className="text-xl font-semibold mb-3">Examples</h2>
         <CodeBlock code={`# Interactive two-way merge between two local folders
-gitmap merge-both ./gitmap-v16 ./gitmap-v16
+gitmap merge-both ./gitmap-v17 ./gitmap-v17
 
 # Non-interactive (newer wins by default) — commits + pushes the URL side
 gitmap mb ./local https://github.com/owner/repo -y

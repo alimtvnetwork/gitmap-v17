@@ -23,9 +23,9 @@ const (
 // Remote installer URLs (fallback when embedded scripts are missing).
 const (
 	SelfInstallRemotePwsh = "https://raw.githubusercontent.com/" +
-		"alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1"
+		"alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1"
 	SelfInstallRemoteBash = "https://raw.githubusercontent.com/" +
-		"alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh"
+		"alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh"
 )
 
 // Self-install messages.

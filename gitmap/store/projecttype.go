@@ -2,7 +2,7 @@
 package store
 
 import (
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // SeedProjectTypes inserts all supported project types if not present.

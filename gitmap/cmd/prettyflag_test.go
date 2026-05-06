@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/render"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/render"
 )
 
 // TestParsePrettyFlagDefaultsToAuto guards the no-flag path — every

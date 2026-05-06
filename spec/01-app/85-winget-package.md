@@ -41,9 +41,9 @@ PackageLocale: en-US
 Publisher: AliMTVNetworkSolutions
 PublisherUrl: https://github.com/alimtvnetwork
 PackageName: GitMap
-PackageUrl: https://github.com/alimtvnetwork/gitmap-v16
+PackageUrl: https://github.com/alimtvnetwork/gitmap-v17
 License: MIT
-LicenseUrl: https://github.com/alimtvnetwork/gitmap-v16/blob/main/LICENSE
+LicenseUrl: https://github.com/alimtvnetwork/gitmap-v17/blob/main/LICENSE
 ShortDescription: Git repository scanner, manager, and navigator CLI tool.
 Description: GitMap scans, catalogs, and manages Git repositories across your machine. It provides cloning, grouping, aliasing, release management, and more.
 Tags:
@@ -68,10 +68,10 @@ NestedInstallerFiles:
     PortableCommandAlias: gitmap
 Installers:
   - Architecture: x64
-    InstallerUrl: https://github.com/alimtvnetwork/gitmap-v16/releases/download/v2.49.1/gitmap-v16.49.1-windows-amd64.zip
+    InstallerUrl: https://github.com/alimtvnetwork/gitmap-v17/releases/download/v2.49.1/gitmap-v17.49.1-windows-amd64.zip
     InstallerSha256: <SHA256_OF_ZIP>
   - Architecture: arm64
-    InstallerUrl: https://github.com/alimtvnetwork/gitmap-v16/releases/download/v2.49.1/gitmap-v16.49.1-windows-arm64.zip
+    InstallerUrl: https://github.com/alimtvnetwork/gitmap-v17/releases/download/v2.49.1/gitmap-v17.49.1-windows-arm64.zip
     InstallerSha256: <SHA256_OF_ZIP>
 ManifestType: installer
 ManifestVersion: 1.6.0
@@ -88,7 +88,7 @@ ManifestVersion: 1.6.0
 
 2. **Generate manifests (interactive):**
    ```powershell
-   wingetcreate new https://github.com/alimtvnetwork/gitmap-v16/releases/download/v2.49.1/gitmap-v16.49.1-windows-amd64.zip
+   wingetcreate new https://github.com/alimtvnetwork/gitmap-v17/releases/download/v2.49.1/gitmap-v17.49.1-windows-amd64.zip
    ```
 
 3. **Validate manifests:**
@@ -111,7 +111,7 @@ ManifestVersion: 1.6.0
 
 ```powershell
 wingetcreate update AliMTVNetwork.GitMap --version 2.49.1 \
-  --urls https://github.com/alimtvnetwork/gitmap-v16/releases/download/v2.49.1/gitmap-v16.49.1-windows-amd64.zip \
+  --urls https://github.com/alimtvnetwork/gitmap-v17/releases/download/v2.49.1/gitmap-v17.49.1-windows-amd64.zip \
   --submit --token <GITHUB_PAT>
 ```
 
@@ -127,7 +127,7 @@ Add to `.github/workflows/release.yml`:
   run: |
     wingetcreate update AliMTVNetwork.GitMap \
       --version ${{ github.ref_name }} \
-      --urls "https://github.com/alimtvnetwork/gitmap-v16/releases/download/${{ github.ref_name }}/gitmap-${{ github.ref_name }}-windows-amd64.zip" \
+      --urls "https://github.com/alimtvnetwork/gitmap-v17/releases/download/${{ github.ref_name }}/gitmap-${{ github.ref_name }}-windows-amd64.zip" \
       --submit --token $WINGET_PAT
 ```
 

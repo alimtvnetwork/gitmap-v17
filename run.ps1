@@ -715,7 +715,7 @@ function Build-Binary {
     Push-Location $GitMapDir
     try {
         $absRepoRoot = (Resolve-Path $RepoRoot).Path
-        $ldflags = "-X 'github.com/alimtvnetwork/gitmap-v16/gitmap/constants.RepoPath=$absRepoRoot'"
+        $ldflags = "-X 'github.com/alimtvnetwork/gitmap-v17/gitmap/constants.RepoPath=$absRepoRoot'"
 
         # Pre-build provenance stamp — prints commit SHA, branch, declared
         # version, and a fingerprint of the historically-problematic cmd/

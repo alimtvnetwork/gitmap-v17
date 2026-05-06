@@ -16,7 +16,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // Folder is one entry in the workspace's "folders" array.

@@ -1741,7 +1741,7 @@ export const commands: CommandDef[] = [
     name: "mv", alias: "move", description: "Move LEFT folder's contents into RIGHT, then delete LEFT entirely (each side may be a local folder or a remote git URL)",
     usage: "gitmap mv LEFT RIGHT [--no-push] [--no-commit] [--force-folder] [--pull] [--init] [--dry-run]",
     examples: [
-      { command: "gitmap mv ./gitmap-v16 ./gitmap-v16", description: "Move local folder into another local folder, deleting source" },
+      { command: "gitmap mv ./gitmap-v17 ./gitmap-v17", description: "Move local folder into another local folder, deleting source" },
       { command: "gitmap mv ./local https://github.com/owner/repo", description: "Move local folder into a remote repo (clone, copy, commit, push)" },
       { command: "gitmap mv https://github.com/owner/repo:develop ./mirror", description: "Pin remote branch and move into local folder" },
       { command: "gitmap mv ./a ./b --dry-run", description: "Preview the move without writing anything" },
@@ -1757,7 +1757,7 @@ export const commands: CommandDef[] = [
     name: "merge-both", alias: "mb", description: "Bidirectional file-level merge: each side gains the other's missing files; conflicts trigger an [L]eft/[R]ight/[S]kip/[A]ll-left/[B]all-right/[Q]uit prompt",
     usage: "gitmap merge-both LEFT RIGHT [-y] [--prefer-newer|--prefer-left|--prefer-right|--prefer-skip] [--no-push] [--no-commit] [--dry-run]",
     examples: [
-      { command: "gitmap merge-both ./gitmap-v16 ./gitmap-v16", description: "Interactive two-way merge between two local folders" },
+      { command: "gitmap merge-both ./gitmap-v17 ./gitmap-v17", description: "Interactive two-way merge between two local folders" },
       { command: "gitmap mb ./local https://github.com/owner/repo -y", description: "Non-interactive (newer wins by default for merge-both); commits + pushes the URL side" },
       { command: "gitmap merge-both ./a ./b -y --prefer-left --dry-run", description: "Preview a LEFT-wins merge without writing" },
     ],
@@ -1773,7 +1773,7 @@ export const commands: CommandDef[] = [
     name: "merge-left", alias: "ml", description: "One-way merge that writes only into LEFT; missing files copied from RIGHT, conflicts resolved into LEFT. RIGHT is never modified.",
     usage: "gitmap merge-left LEFT RIGHT [-y] [--prefer-right|--prefer-left|--prefer-newer|--prefer-skip] [--no-push] [--no-commit]",
     examples: [
-      { command: "gitmap merge-left ./gitmap-v16 ./gitmap-v16", description: "Pull RIGHT's changes into LEFT (interactive prompt)" },
+      { command: "gitmap merge-left ./gitmap-v17 ./gitmap-v17", description: "Pull RIGHT's changes into LEFT (interactive prompt)" },
       { command: "gitmap ml ./local https://github.com/owner/upstream -y", description: "Non-interactive (RIGHT wins by default for merge-left)" },
       { command: "gitmap merge-left ./mine ./theirs -y --prefer-left", description: "Bypass + keep LEFT everywhere on conflict" },
     ],
@@ -1803,7 +1803,7 @@ export const commands: CommandDef[] = [
     name: "diff", alias: "df", description: "Read-only preview of what merge-both/merge-left/merge-right would change between two folders; lists missing-on-each-side and conflicting files. Writes nothing.",
     usage: "gitmap diff LEFT RIGHT [--json] [--only-conflicts] [--only-missing] [--include-identical] [--include-vcs] [--include-node-modules]",
     examples: [
-      { command: "gitmap diff ./gitmap-v16 ./gitmap-v16", description: "Plain text diff of two local folders" },
+      { command: "gitmap diff ./gitmap-v17 ./gitmap-v17", description: "Plain text diff of two local folders" },
       { command: "gitmap diff ./a ./b --only-conflicts", description: "Show only files that differ on both sides" },
       { command: "gitmap df ./a ./b --json", description: "Machine-readable {summary, entries} JSON" },
     ],

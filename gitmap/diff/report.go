@@ -6,7 +6,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // Summary is the per-kind tally returned alongside the entries.

@@ -481,7 +481,7 @@ build_binary() {
     cd "$GITMAP_DIR"
     local abs_repo_root
     abs_repo_root=$(cd "$REPO_ROOT" && pwd)
-    local ldflags="-X 'github.com/alimtvnetwork/gitmap-v16/gitmap/constants.RepoPath=$abs_repo_root'"
+    local ldflags="-X 'github.com/alimtvnetwork/gitmap-v17/gitmap/constants.RepoPath=$abs_repo_root'"
 
     # Pre-build provenance stamp — prints commit SHA, branch, declared
     # version, and a fingerprint of the historically-problematic cmd/

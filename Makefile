@@ -5,7 +5,7 @@ LINT     := golangci-lint
 MODULE   := gitmap
 BINARY   := gitmap
 VERSION  ?= dev
-LDFLAGS  := -s -w -X 'github.com/alimtvnetwork/gitmap-v16/gitmap/constants.Version=$(VERSION)'
+LDFLAGS  := -s -w -X 'github.com/alimtvnetwork/gitmap-v17/gitmap/constants.Version=$(VERSION)'
 
 # Force bash for recipes — fixtures-bump targets rely on $${PIPESTATUS[0]}
 # which is a bash builtin (dash and POSIX sh do not provide it).

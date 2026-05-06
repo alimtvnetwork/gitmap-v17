@@ -17,13 +17,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/fixtureversion"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/fixtureversion"
 )
 
 // fixRepoV9ToV12FixtureBody is the on-disk fixture: every realistic
 // shape we have seen in third-party Go repos that depend on a
 // versioned module — bare slug, dash form, slash form, and a digit-
-// adjacent token (`gitmap-v10`) that MUST NOT match `gitmap-v9`.
+// adjacent token (`gitmap-v17`) that MUST NOT match `gitmap-v17`.
 // We use `-v10` (a real, plausible neighbor version) rather than the
 // nonsensical `-v90` to keep the fixture readable while still locking
 // the negative-lookahead guard against `-v9` matching inside `-v10`.
@@ -33,8 +33,8 @@ import (
 // actionable "regenerate via ..." message instead of a confusing
 // rewrite-count mismatch.
 //
-// IMPORTANT: this body MUST contain `gitmap-v9` tokens (the rewrite
-// target) and a `gitmap-v10` guarded neighbor. A previous global
+// IMPORTANT: this body MUST contain `gitmap-v17` tokens (the rewrite
+// target) and a `gitmap-v17` guarded neighbor. A previous global
 // rename collapsed every `-v9` token into `-v16` and silently broke
 // the test (rewriter found 0 tokens to bump). See
 // .lovable/memory/issues/2026-05-01-fixrepo-digit-capture-desync.md.
@@ -42,13 +42,13 @@ const fixRepoV9ToV12FixtureBody = `// fixture-stamp: name=fixrepo-v9-to-v12 gene
 module example.com/consumer
 
 require (
-	github.com/alimtvnetwork/gitmap-v9 v0.0.0
+	github.com/alimtvnetwork/gitmap-v17 v0.0.0
 )
 
-import gm "github.com/alimtvnetwork/gitmap-v9/gitmap/cmd"
+import gm "github.com/alimtvnetwork/gitmap-v17/gitmap/cmd"
 
-// repo URL: https://github.com/alimtvnetwork/gitmap-v9.git
-// guarded:  gitmap-v10 must NOT be rewritten by target=9 (v9 is a
+// repo URL: https://github.com/alimtvnetwork/gitmap-v17.git
+// guarded:  gitmap-v17 must NOT be rewritten by target=9 (v9 is a
 //           prefix of v10 — the negative-lookahead guard skips it)
 `
 
@@ -145,7 +145,7 @@ func countUnguardedHits(body, token string) int {
 }
 
 // assertGuardedNeighborPreserved locks the negative-lookahead guard:
-// `gitmap-v16` must survive untouched when bumping target=9, because
+// `gitmap-v17` must survive untouched when bumping target=9, because
 // `-v9` is a prefix of `-v10` and the rewriter's negative-lookahead
 // must skip digit-adjacent matches.
 func assertGuardedNeighborPreserved(t *testing.T, got, base string) {

@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // scanBenchmarkFile is the fixed log file name appended in the scan

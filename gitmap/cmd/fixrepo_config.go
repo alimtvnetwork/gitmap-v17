@@ -12,7 +12,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // fixRepoConfig is the on-disk JSON shape (matches fix-repo.config.json).

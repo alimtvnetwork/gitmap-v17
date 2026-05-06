@@ -290,7 +290,7 @@ Users running install scripts saw checksum-verification failures even when the b
 
 ### Root Cause
 
-The compress step produced `gitmap-v16.56.0-windows-amd64.zip`, but the checksum step (which ran in a different working directory) generated `checksums.txt` listing `gitmap-windows-amd64.zip` (without the version). Install scripts looked up the versioned name in a non-versioned manifest → mismatch → "tampered binary" error.
+The compress step produced `gitmap-v17.56.0-windows-amd64.zip`, but the checksum step (which ran in a different working directory) generated `checksums.txt` listing `gitmap-windows-amd64.zip` (without the version). Install scripts looked up the versioned name in a non-versioned manifest → mismatch → "tampered binary" error.
 
 ### Fix
 

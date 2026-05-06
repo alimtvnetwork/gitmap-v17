@@ -32,14 +32,14 @@ The package does NOT embed the binary. Instead, `chocolateyInstall.ps1` download
     <version>2.49.1</version>
     <title>GitMap</title>
     <authors>AliMTVNetworkSolutions</authors>
-    <projectUrl>https://github.com/alimtvnetwork/gitmap-v16</projectUrl>
-    <licenseUrl>https://github.com/alimtvnetwork/gitmap-v16/blob/main/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/alimtvnetwork/gitmap-v17</projectUrl>
+    <licenseUrl>https://github.com/alimtvnetwork/gitmap-v17/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Git repository scanner, manager, and navigator CLI tool.</description>
     <tags>git cli devtools repository manager</tags>
-    <projectSourceUrl>https://github.com/alimtvnetwork/gitmap-v16</projectSourceUrl>
-    <packageSourceUrl>https://github.com/alimtvnetwork/gitmap-v16</packageSourceUrl>
-    <releaseNotes>https://github.com/alimtvnetwork/gitmap-v16/releases</releaseNotes>
+    <projectSourceUrl>https://github.com/alimtvnetwork/gitmap-v17</projectSourceUrl>
+    <packageSourceUrl>https://github.com/alimtvnetwork/gitmap-v17</packageSourceUrl>
+    <releaseNotes>https://github.com/alimtvnetwork/gitmap-v17/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools/**" target="tools" />
@@ -54,7 +54,7 @@ $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'gitmap'
-  url64bit       = 'https://github.com/alimtvnetwork/gitmap-v16/releases/download/v2.49.1/gitmap-v16.49.1-windows-amd64.zip'
+  url64bit       = 'https://github.com/alimtvnetwork/gitmap-v17/releases/download/v2.49.1/gitmap-v17.49.1-windows-amd64.zip'
   checksum64     = '<SHA256_HASH>'
   checksumType64 = 'sha256'
   unzipLocation  = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"

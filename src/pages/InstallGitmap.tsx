@@ -9,7 +9,7 @@ import { Download, RefreshCw, Trash2, Stethoscope, Apple, Terminal, MonitorSmart
 // Keep these snippets byte-identical with the spec table so users
 // landing on README, web docs, or `--help` see the same commands.
 
-const REPO_RAW = "https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main";
+const REPO_RAW = "https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main";
 
 const installCmds = {
   windows: `irm ${REPO_RAW}/gitmap/scripts/install.ps1 | iex`,

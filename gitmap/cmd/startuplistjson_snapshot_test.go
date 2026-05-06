@@ -27,7 +27,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/startup"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/startup"
 )
 
 // Schema for `gitmap startup-list --format=json|jsonl|csv` rows is

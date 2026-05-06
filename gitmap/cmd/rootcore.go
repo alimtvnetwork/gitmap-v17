@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // dispatchCore routes scan, clone, pull, and status commands.

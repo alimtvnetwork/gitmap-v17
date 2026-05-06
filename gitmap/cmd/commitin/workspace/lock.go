@@ -7,7 +7,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // LockHandle owns a single advisory lock acquired via AcquireLock.

@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // Counters captures the per-run tally rendered by the summary line.

@@ -27,18 +27,18 @@ const TerminalPreview = () => (
         <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
         <span className="w-3 h-3 rounded-full bg-green-500/80" />
       </div>
-      <span className="text-xs font-mono text-muted-foreground ml-2">gitmap mv ./gitmap-v16 https://github.com/owner/gitmap-v16</span>
+      <span className="text-xs font-mono text-muted-foreground ml-2">gitmap mv ./gitmap-v17 https://github.com/owner/gitmap-v17</span>
     </div>
     <div className="bg-terminal p-4 font-mono text-xs leading-relaxed overflow-x-auto">
-      <div className="text-terminal-foreground">[mv] resolving RIGHT : https://github.com/owner/gitmap-v16</div>
-      <div className="text-terminal-foreground">[mv]   -&gt; mapped to working folder: /work/gitmap-v16</div>
+      <div className="text-terminal-foreground">[mv] resolving RIGHT : https://github.com/owner/gitmap-v17</div>
+      <div className="text-terminal-foreground">[mv]   -&gt; mapped to working folder: /work/gitmap-v17</div>
       <div className="text-terminal-foreground">[mv]   -&gt; folder does not exist; cloning</div>
       <div className="text-green-400">[mv]   -&gt; clone OK</div>
       <div className="text-terminal-foreground">[mv] copying files LEFT -&gt; RIGHT (excluding .git/) ...</div>
       <div className="text-green-400">[mv]   copied 142 files</div>
-      <div className="text-terminal-foreground">[mv] committing in https://github.com/owner/gitmap-v16 ...</div>
-      <div className="text-terminal-foreground">[mv]   commit a1b2c3d "gitmap mv from ./gitmap-v16"</div>
-      <div className="text-terminal-foreground">[mv] pushing https://github.com/owner/gitmap-v16 ...</div>
+      <div className="text-terminal-foreground">[mv] committing in https://github.com/owner/gitmap-v17 ...</div>
+      <div className="text-terminal-foreground">[mv]   commit a1b2c3d "gitmap mv from ./gitmap-v17"</div>
+      <div className="text-terminal-foreground">[mv] pushing https://github.com/owner/gitmap-v17 ...</div>
       <div className="text-green-400">[mv]   push OK</div>
       <div className="text-blue-400 mt-1">[mv] done</div>
     </div>
@@ -122,13 +122,13 @@ gitmap move LEFT RIGHT [flags]`} />
       <section>
         <h2 className="text-xl font-semibold mb-3">Examples</h2>
         <CodeBlock code={`# Move one local folder into another
-gitmap mv ./gitmap-v16 ./gitmap-v16
+gitmap mv ./gitmap-v17 ./gitmap-v17
 
 # Move a local folder into a remote repo (clone + push)
-gitmap mv ./gitmap-v16 https://github.com/owner/gitmap-v16
+gitmap mv ./gitmap-v17 https://github.com/owner/gitmap-v17
 
 # Preview without writing anything
-gitmap mv ./gitmap-v16 ./gitmap-v16 --dry-run`} />
+gitmap mv ./gitmap-v17 ./gitmap-v17 --dry-run`} />
       </section>
 
       <section>

@@ -8,12 +8,12 @@ import (
 	"io"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/finalize"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/profile"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/runlog"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/workspace"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/finalize"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/profile"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/runlog"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/workspace"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // Run executes the entire commit-in pipeline for one parsed argv.

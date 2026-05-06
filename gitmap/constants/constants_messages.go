@@ -222,15 +222,15 @@ const (
   How to fix:
 
     Option 1 — Re-install via the one-liner (recommended):
-      irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex
+      irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex
 
     Option 2 — Clone the repo and build from source:
-      git clone https://github.com/alimtvnetwork/gitmap-v16.git C:\gitmap-src
+      git clone https://github.com/alimtvnetwork/gitmap-v17.git C:\gitmap-src
       cd C:\gitmap-src
       .\run.ps1
 
     Option 3 — Download the latest release manually:
-      https://github.com/alimtvnetwork/gitmap-v16/releases/latest
+      https://github.com/alimtvnetwork/gitmap-v17/releases/latest
 
   After building from source, 'gitmap update' will work automatically.
 `

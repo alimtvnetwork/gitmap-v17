@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // StartRun inserts a new CommitInRun row in the `Running` state and

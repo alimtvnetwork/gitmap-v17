@@ -5,7 +5,7 @@ import CodeBlock from "@/components/docs/CodeBlock";
 import { Pin, Wrench, ShieldCheck, Tag, ExternalLink, AlertTriangle } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
-const REPO = "alimtvnetwork/gitmap-v16";
+const REPO = "alimtvnetwork/gitmap-v17";
 const DOCS_HOST = "https://gitmap.dev";
 
 type Platform = "windows" | "unix";

@@ -137,7 +137,7 @@ A shared helper in the `cmd` package intercepts `--help` early:
 // cmd/helpcheck.go
 package cmd
 
-import "github.com/alimtvnetwork/gitmap-v16/gitmap/helptext"
+import "github.com/alimtvnetwork/gitmap-v17/gitmap/helptext"
 
 // checkHelp prints embedded help and exits if --help is present.
 func checkHelp(command string, args []string) {

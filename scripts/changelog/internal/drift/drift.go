@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/alimtvnetwork/gitmap-v16/scripts/changelog/internal/render"
-	"github.com/alimtvnetwork/gitmap-v16/scripts/changelog/internal/writer"
+	"github.com/alimtvnetwork/gitmap-v17/scripts/changelog/internal/render"
+	"github.com/alimtvnetwork/gitmap-v17/scripts/changelog/internal/writer"
 )
 
 const driftExitCode = 3

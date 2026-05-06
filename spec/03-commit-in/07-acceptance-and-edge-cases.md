@@ -16,8 +16,8 @@ exactly one test case. Do not collapse, do not split.
    three cases.
 3. Each input cloned to `<.gitmap>/temp/<runId>/<orderIndex>-<basename>/`
    and recorded in `InputRepo` with the right `InputKind`.
-4. `all` from source basename `gitmap-v16` expands to `gitmap, gitmap-v1,
-   gitmap-v2, …, gitmap-v15` (ascending; plain `gitmap` first as `v0`).
+4. `all` from source basename `gitmap-v17` expands to `gitmap, gitmap-v17,
+   gitmap-v17, …, gitmap-v17` (ascending; plain `gitmap` first as `v0`).
    `-5` returns the last five sibling versions only.
 5. SQLite schema matches §04 byte-for-byte; every PK is
    `INTEGER PRIMARY KEY AUTOINCREMENT` named `<TableName>Id`; every

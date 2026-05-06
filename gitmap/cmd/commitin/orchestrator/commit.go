@@ -5,13 +5,13 @@ import (
 	"io"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/dedupe"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/message"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/replay"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/runlog"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/walk"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/workspace"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/dedupe"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/message"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/replay"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/runlog"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/walk"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/workspace"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // processOneCommit runs one source commit through dedupe → build →

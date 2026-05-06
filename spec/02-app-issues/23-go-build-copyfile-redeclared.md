@@ -8,7 +8,7 @@ Go build fails with two errors:
 ```
 cmd/update.go:204:6: copyFile redeclared in this block
     cmd/installobs.go:281:6: other declaration of copyFile
-cmd/installvscode.go:11:2: "github.com/alimtvnetwork/gitmap-v16/gitmap/constants" imported and not used
+cmd/installvscode.go:11:2: "github.com/alimtvnetwork/gitmap-v17/gitmap/constants" imported and not used
 ```
 
 ## Symptoms
@@ -36,7 +36,7 @@ must be defined exactly once regardless of which file uses them.
 
 ### 2. Unused import
 
-`installvscode.go` imported `github.com/alimtvnetwork/gitmap-v16/gitmap/constants` but never
+`installvscode.go` imported `github.com/alimtvnetwork/gitmap-v17/gitmap/constants` but never
 referenced any symbol from it. Go treats unused imports as compile errors.
 
 ## Fix

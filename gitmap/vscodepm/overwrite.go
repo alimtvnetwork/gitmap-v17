@@ -3,7 +3,7 @@ package vscodepm
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // OverwritePaths sets the Paths field of the entry matching rootPath to

@@ -41,7 +41,7 @@ const (
 	// existence-predicate package. Asserting the import is present
 	// (rather than just the call site) catches a contributor who
 	// removes the import and re-inlines the helper in the same change.
-	fsutilImportPath = "github.com/alimtvnetwork/gitmap-v16/gitmap/fsutil"
+	fsutilImportPath = "github.com/alimtvnetwork/gitmap-v17/gitmap/fsutil"
 
 	// expectedLooseCallSite is the FQN the file must contain at least
 	// once. The string is asserted via the AST (selector expression),

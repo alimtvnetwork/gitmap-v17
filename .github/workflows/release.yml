@@ -60,7 +60,7 @@ jobs:
         working-directory: gitmap
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v16/gitmap/constants.Version=$VERSION'"
+          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v17/gitmap/constants.Version=$VERSION'"
 
           TARGETS=(
             "windows/amd64/.exe"
@@ -84,7 +84,7 @@ jobs:
         working-directory: gitmap-updater
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v16/gitmap-updater/cmd.Version=$VERSION'"
+          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v17/gitmap-updater/cmd.Version=$VERSION'"
 
           TARGETS=(
             "windows/amd64/.exe"
@@ -165,7 +165,7 @@ jobs:
       - name: Generate version-specific install script
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          REPO="alimtvnetwork/gitmap-v16"
+          REPO="alimtvnetwork/gitmap-v17"
 
           cat > gitmap/dist/install.ps1 << 'PSEOF'
           <#
@@ -373,7 +373,7 @@ jobs:
       - name: Generate version-specific install.sh
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          REPO="alimtvnetwork/gitmap-v16"
+          REPO="alimtvnetwork/gitmap-v17"
 
           cat > gitmap/dist/install.sh << 'SHEOF'
           #!/usr/bin/env bash
@@ -587,7 +587,7 @@ jobs:
       - name: Build release body
         run: |
           VERSION="${{ steps.version.outputs.version }}"
-          REPO="alimtvnetwork/gitmap-v16"
+          REPO="alimtvnetwork/gitmap-v17"
           COMMIT_SHA="${GITHUB_SHA}"
           BRANCH="${GITHUB_REF_NAME}"
           BUILD_DATE="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
@@ -764,7 +764,7 @@ jobs:
           LOG: ${{ steps.dryrun.outputs.log }}
         run: |
           $expectedName = "gitmap-$env:VERSION-windows-amd64.zip"
-          $expectedUrl  = "https://github.com/alimtvnetwork/gitmap-v16/releases/download/$env:VERSION/$expectedName"
+          $expectedUrl  = "https://github.com/alimtvnetwork/gitmap-v17/releases/download/$env:VERSION/$expectedName"
 
           $report = @{}
           Get-Content $env:LOG | ForEach-Object {

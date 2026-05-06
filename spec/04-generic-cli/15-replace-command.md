@@ -79,8 +79,8 @@ Algorithm (must be implemented exactly):
 6. `base` is the project base name. `num` (parsed as int) is the
    current version `K`. Both are required for the search pattern.
 
-**Example:** `git@github.com:alimtvnetwork/gitmap-v16.git`
-→ `slug = "gitmap-v16"` → `base = "gitmap"`, `K = 7`.
+**Example:** `git@github.com:alimtvnetwork/gitmap-v17.git`
+→ `slug = "gitmap-v17"` → `base = "gitmap"`, `K = 7`.
 
 ---
 
@@ -92,7 +92,7 @@ For a given target version `T` (an int < `K`), the search pattern is the
 
 By the user's explicit answer ("Any occurrence of the base name +
 version"), we also replace `<base>/v<T>` → `<base>/v<K>` in the same
-pass (covers Go module import paths like `github.com/x/gitmap-v16` and
+pass (covers Go module import paths like `github.com/x/gitmap-v17` and
 `github.com/x/gitmap/v4`).
 
 We do **not** touch bare `vN` tokens that aren't adjacent to `<base>`.
@@ -221,8 +221,8 @@ path, err)` and exit `2` after attempting all remaining files.
 
 ```
 replace: scanning 4123 files in /repo/root
-replace: src/foo.go: 3 matches (gitmap-v16 → gitmap-v16)
-replace: docs/setup.md: 1 match (gitmap-v16 → gitmap-v16)
+replace: src/foo.go: 3 matches (gitmap-v17 → gitmap-v17)
+replace: docs/setup.md: 1 match (gitmap-v17 → gitmap-v17)
 ...
 replace: 12 files, 47 replacements
 Apply replacements for versions v4..v6 → v7? [y/N]: y

@@ -128,7 +128,7 @@ All steps prefix `[clone]` for grep-ability:
   [clone] cloning into D:\wp-work\riseup-asia\scripts-fixer.gitmap-tmp-7f2a
   [clone] emptying target contents (12 entries)
   [clone] moving 12 entries from temp into target
-  [clone] swap complete; target now points at fresh clone (gitmap-v16)
+  [clone] swap complete; target now points at fresh clone (gitmap-v17)
   [clone] cleaned up temp folder
 ```
 

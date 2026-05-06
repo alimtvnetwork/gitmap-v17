@@ -21,7 +21,7 @@ package cmd
 import (
 	"io"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // PrintCmdFaithfulReportForTest wraps PrintCmdFaithfulReport in a

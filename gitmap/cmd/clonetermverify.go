@@ -35,7 +35,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // CmdFaithfulMismatch describes one position-level divergence between

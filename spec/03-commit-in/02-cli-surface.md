@@ -59,7 +59,7 @@ Discovery rules:
 - Search the **parent directory of `<source>`**.
 - A sibling matches when its basename equals `<base>` or `<base>-vN`
   where `<base>` is `<source>`'s basename with any trailing `-vN`
-  stripped (e.g. `gitmap-v16` → base `gitmap`).
+  stripped (e.g. `gitmap-v17` → base `gitmap`).
 - Walk order: plain `<base>` FIRST (treated as `v0`), then `v1`, `v2`,
   …, `vK`. Numeric ascending. (Resolves Ambiguity #1, #2.)
 - `<source>` itself is excluded from the input list.

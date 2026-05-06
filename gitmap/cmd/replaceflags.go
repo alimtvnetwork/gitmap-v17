@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // replaceOpts holds parsed flags for `gitmap replace`. Kept tiny so

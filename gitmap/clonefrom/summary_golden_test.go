@@ -34,8 +34,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/goldenguard"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/goldenguard"
 )
 
 // canonicalReportResults builds a deterministic 3-row fixture that

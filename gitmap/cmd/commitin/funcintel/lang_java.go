@@ -3,7 +3,7 @@ package funcintel
 import (
 	"regexp"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 var javaMethodRe = regexp.MustCompile(`^\s*(?:public|protected|private)?\s*(?:static\s+)?[A-Za-z_][A-Za-z0-9_<>\[\]]*\s+([A-Za-z_][A-Za-z0-9_]*)\s*\([^)]*\)\s*\{`)

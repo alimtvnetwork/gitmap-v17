@@ -4,14 +4,14 @@
 
 **Git repository scanner, manager, and navigator CLI**
 
-[![CI](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/ci.yml/badge.svg)](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/ci.yml)
-[![golangci-lint](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/ci.yml)
-[![Vulncheck](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/vulncheck.yml/badge.svg)](https://github.com/alimtvnetwork/gitmap-v16/actions/workflows/vulncheck.yml)
-[![GitHub Release](https://img.shields.io/github/v/release/alimtvnetwork/gitmap-v16?style=flat-square&label=version)](https://github.com/alimtvnetwork/gitmap-v16/releases)
+[![CI](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/ci.yml/badge.svg)](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/ci.yml)
+[![golangci-lint](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/ci.yml)
+[![Vulncheck](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/vulncheck.yml/badge.svg)](https://github.com/alimtvnetwork/gitmap-v17/actions/workflows/vulncheck.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/alimtvnetwork/gitmap-v17?style=flat-square&label=version)](https://github.com/alimtvnetwork/gitmap-v17/releases)
 [![Go](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat-square&logo=go&logoColor=white)](https://go.dev)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat-square)](https://github.com/alimtvnetwork/gitmap-v16)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat-square)](https://github.com/alimtvnetwork/gitmap-v17)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/alimtvnetwork/gitmap-v16/gitmap?style=flat-square)](https://goreportcard.com/report/github.com/alimtvnetwork/gitmap-v16/gitmap)
+[![Go Report Card](https://goreportcard.com/badge/github.com/alimtvnetwork/gitmap-v17/gitmap?style=flat-square)](https://goreportcard.com/report/github.com/alimtvnetwork/gitmap-v17/gitmap)
 
 _Scan, catalog, clone, and manage all your Git repositories from a single CLI._
 
@@ -40,25 +40,25 @@ GitMap is a **Windows-first** project. The commands below install the latest rel
 ### 🪟 Windows · PowerShell (latest)
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex
 ```
 
 ### 🐧 macOS · Linux · Bash (latest)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh | sh
 ```
 
 ### 📌 Pinned version (`v4.1.0`)
 
 ```powershell
 # Windows · PowerShell
-irm https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.ps1 | iex
+irm https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.ps1 | iex
 ```
 
 ```bash
 # macOS · Linux · Bash
-curl -fsSL https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.sh | bash
+curl -fsSL https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.sh | bash
 ```
 
 #### 🧭 Version matrix — `v4.1.0` install-script URLs
@@ -67,13 +67,13 @@ One-line installers and release assets for the pinned **v4.1.0** build across ev
 
 | Platform | Shell | Install-script URL | Release binary asset |
 | --- | --- | --- | --- |
-| **Windows** (amd64) | PowerShell | [`release-version-v4.1.0.ps1`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.ps1) | [`gitmap-v16.1.0-windows-amd64.zip`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/gitmap-v16.1.0-windows-amd64.zip) |
-| **macOS** (arm64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v16.1.0-darwin-arm64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/gitmap-v16.1.0-darwin-arm64.tar.gz) |
-| **macOS** (amd64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v16.1.0-darwin-amd64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/gitmap-v16.1.0-darwin-amd64.tar.gz) |
-| **Linux** (amd64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v16.1.0-linux-amd64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/gitmap-v16.1.0-linux-amd64.tar.gz) |
-| **Linux** (arm64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v16.1.0-linux-arm64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v16/releases/download/v4.1.0/gitmap-v16.1.0-linux-arm64.tar.gz) |
+| **Windows** (amd64) | PowerShell | [`release-version-v4.1.0.ps1`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.ps1) | [`gitmap-v17.1.0-windows-amd64.zip`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/gitmap-v17.1.0-windows-amd64.zip) |
+| **macOS** (arm64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v17.1.0-darwin-arm64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/gitmap-v17.1.0-darwin-arm64.tar.gz) |
+| **macOS** (amd64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v17.1.0-darwin-amd64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/gitmap-v17.1.0-darwin-amd64.tar.gz) |
+| **Linux** (amd64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v17.1.0-linux-amd64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/gitmap-v17.1.0-linux-amd64.tar.gz) |
+| **Linux** (arm64) | Bash | [`release-version-v4.1.0.sh`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/release-version-v4.1.0.sh) | [`gitmap-v17.1.0-linux-arm64.tar.gz`](https://github.com/alimtvnetwork/gitmap-v17/releases/download/v4.1.0/gitmap-v17.1.0-linux-arm64.tar.gz) |
 
-> **Release page:** [github.com/alimtvnetwork/gitmap-v16/releases/tag/v4.1.0](https://github.com/alimtvnetwork/gitmap-v16/releases/tag/v4.1.0) · **Asset naming contract:** `gitmap-<version>-<os>-<arch>.<ext>` (`.zip` on Windows, `.tar.gz` elsewhere) — verified by the installer pre-flight HEAD probe.
+> **Release page:** [github.com/alimtvnetwork/gitmap-v17/releases/tag/v4.1.0](https://github.com/alimtvnetwork/gitmap-v17/releases/tag/v4.1.0) · **Asset naming contract:** `gitmap-<version>-<os>-<arch>.<ext>` (`.zip` on Windows, `.tar.gz` elsewhere) — verified by the installer pre-flight HEAD probe.
 
 ### 🎯 Install — Quick (pick your install drive)
 
@@ -81,12 +81,12 @@ Use this **only** when you want to choose a specific drive or folder (e.g. insta
 
 ```powershell
 # Windows · PowerShell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.ps1 | iex
 ```
 
 ```bash
 # macOS · Linux · Bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.sh | bash
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.sh | bash
 ```
 
 > **How install resolves a version:** every installer follows the generic contract in [`spec/07-generic-release/09-generic-install-script-behavior.md`](spec/07-generic-release/09-generic-install-script-behavior.md). In short — **strict tag mode** (`--version <tag>` / `-Version <tag>`) installs that exact release with **no fallback whatsoever** (no `latest`, no sibling probe, no main-branch HEAD; missing tag → exit 1). **Discovery mode** (no tag supplied) probes the next 20 `-v<N+i>` sibling repos in parallel, then falls back to `releases/latest`, and finally to the default branch HEAD as a last resort.
@@ -97,7 +97,7 @@ curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/insta
 
 ### What is GitMap?
 
-**GitMap** ([this repository](https://github.com/alimtvnetwork/gitmap-v16))
+**GitMap** ([this repository](https://github.com/alimtvnetwork/gitmap-v17))
 is an all-in-one **Git workspace CLI**. It scans any folder tree,
 catalogs every Git repository it finds, and lets you clone, mirror,
 navigate, release, and manage all of them as a single map — instead
@@ -232,13 +232,13 @@ Removes the gitmap binary, deploy folder, PATH entries, and (optionally) the use
 #### Windows (PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/uninstall-quick.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/uninstall-quick.ps1 | iex
 ```
 
 #### Linux / macOS
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/uninstall-quick.sh | bash
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/uninstall-quick.sh | bash
 ```
 
 Useful flags (both scripts):
@@ -292,13 +292,13 @@ The canonical installer (`install.ps1` / `install.sh`) is the **default**: no pr
 #### Windows (PowerShell) — Default
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex
 ```
 
 #### Linux / macOS (Bash) — Default
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh | sh
 ```
 
 #### Windows (PowerShell) — Full bootstrap (locked-down machines)
@@ -306,7 +306,7 @@ curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitma
 Use when execution policy / TLS settings block the short form above.
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1'))
 ```
 
 #### Windows (PowerShell) — Quick (drive picker)
@@ -314,13 +314,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Prompts for the install drive/folder before delegating to the canonical installer.
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.ps1 | iex
 ```
 
 #### Linux / macOS (Bash) — Quick (drive picker)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.sh | bash
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.sh | bash
 ```
 
 ### Installer Options
@@ -356,7 +356,7 @@ To handle missing versions in automated environments:
 1. **Use `--allow-fallback`** — Automatically picks the newest patch in the same
    minor series (e.g., `v3.38.0` requested but missing → uses `v3.38.5`):
    ```powershell
-   irm https://github.com/alimtvnetwork/gitmap-v16/releases/download/v3.38.0/release-version-v3.38.0.ps1 | iex
+   irm https://github.com/alimtvnetwork/gitmap-v17/releases/download/v3.38.0/release-version-v3.38.0.ps1 | iex
    # Or with generic script:
    irm https://gitmap.dev/scripts/release-version.ps1 | iex; Install-Gitmap -Version "v3.38.0" -AllowFallback
    ```
@@ -371,21 +371,21 @@ For reproducible installs, use the **per-version snapshot scripts** that are
 
 | Script | URL Pattern |
 |--------|-------------|
-| Pinned PowerShell | `https://github.com/alimtvnetwork/gitmap-v16/releases/download/{version}/release-version-{version}.ps1` |
-| Pinned Bash | `https://github.com/alimtvnetwork/gitmap-v16/releases/download/{version}/release-version-{version}.sh` |
+| Pinned PowerShell | `https://github.com/alimtvnetwork/gitmap-v17/releases/download/{version}/release-version-{version}.ps1` |
+| Pinned Bash | `https://github.com/alimtvnetwork/gitmap-v17/releases/download/{version}/release-version-{version}.sh` |
 | Generic PowerShell | `https://gitmap.dev/scripts/release-version.ps1` (requires `-Version` param) |
 | Generic Bash | `https://gitmap.dev/scripts/release-version.sh` (requires `--version` flag) |
 
 **Specific version install (one-liner with fallback):**
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex; Install-Gitmap -Version "v2.51.0"
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex; Install-Gitmap -Version "v2.51.0"
 ```
 
 **Specific version + custom directory (one-liner):**
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex; Install-Gitmap -Version "v2.51.0" -InstallDir "D:\DevTools\gitmap"
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex; Install-Gitmap -Version "v2.51.0" -InstallDir "D:\DevTools\gitmap"
 ```
 
 **Custom directory install (downloaded script):**
@@ -403,7 +403,7 @@ irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scrip
 **Linux / macOS — specific version:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh | sh -s -- --version v2.51.0
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh | sh -s -- --version v2.51.0
 ```
 
 > **Tip:** Use `gitmap list-versions` to see all available release versions before pinning.
@@ -411,7 +411,7 @@ curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitma
 ### Clone & Setup (Development)
 
 ```bash
-git clone https://github.com/alimtvnetwork/gitmap-v16.git gitmap
+git clone https://github.com/alimtvnetwork/gitmap-v17.git gitmap
 ```
 
 ```bash
@@ -1223,10 +1223,10 @@ gitmap clone ./gitmap-output/gitmap.json --safe-pull
 gitmap clone ./gitmap-output/gitmap.json --github-desktop
 
 # clone a single repo by URL (auto-flattens versioned URLs)
-gitmap clone https://github.com/alimtvnetwork/gitmap-v16
-gitmap clone https://github.com/alimtvnetwork/gitmap-v16 my-folder
-gitmap clone git@github.com:alimtvnetwork/gitmap-v16.git my-folder
-gitmap clone https://github.com/alimtvnetwork/gitmap-v16 --replace   # see spec 96
+gitmap clone https://github.com/alimtvnetwork/gitmap-v17
+gitmap clone https://github.com/alimtvnetwork/gitmap-v17 my-folder
+gitmap clone git@github.com:alimtvnetwork/gitmap-v17.git my-folder
+gitmap clone https://github.com/alimtvnetwork/gitmap-v17 --replace   # see spec 96
 
 # clone-next: jump to the next (or specific) versioned sibling
 gitmap cn v++                                   # my-app-v3 -> my-app-v4
@@ -1436,33 +1436,33 @@ the result is committed + pushed back when the operation completes.
 
 ```bash
 # move: classic file copy + delete source
-gitmap mv ./gitmap-v16 ./gitmap-v16
-gitmap mv ./gitmap-v16 https://github.com/alimtvnetwork/gitmap-v16
-gitmap mv https://github.com/alimtvnetwork/gitmap-v16 ./another-folder
-gitmap mv https://github.com/alimtvnetwork/gitmap-v16 \
-         https://github.com/alimtvnetwork/gitmap-v16
+gitmap mv ./gitmap-v17 ./gitmap-v17
+gitmap mv ./gitmap-v17 https://github.com/alimtvnetwork/gitmap-v17
+gitmap mv https://github.com/alimtvnetwork/gitmap-v17 ./another-folder
+gitmap mv https://github.com/alimtvnetwork/gitmap-v17 \
+         https://github.com/alimtvnetwork/gitmap-v17
 
 # merge-both: bidirectional fill (each side gains what the other has)
-gitmap merge-both ./gitmap-v16 ./gitmap-v16
-gitmap merge-both ./gitmap-v16 https://github.com/alimtvnetwork/gitmap-v16
-gitmap merge-both https://github.com/alimtvnetwork/gitmap-v16 \
-                  https://github.com/alimtvnetwork/gitmap-v16
+gitmap merge-both ./gitmap-v17 ./gitmap-v17
+gitmap merge-both ./gitmap-v17 https://github.com/alimtvnetwork/gitmap-v17
+gitmap merge-both https://github.com/alimtvnetwork/gitmap-v17 \
+                  https://github.com/alimtvnetwork/gitmap-v17
 
 # merge-left: take RIGHT into LEFT
-gitmap merge-left ./gitmap-v16 ./gitmap-v16
-gitmap merge-left ./local https://github.com/alimtvnetwork/gitmap-v16
+gitmap merge-left ./gitmap-v17 ./gitmap-v17
+gitmap merge-left ./local https://github.com/alimtvnetwork/gitmap-v17
 
 # merge-right: take LEFT into RIGHT
-gitmap merge-right ./gitmap-v16 ./gitmap-v16
-gitmap merge-right ./local https://github.com/alimtvnetwork/gitmap-v16
+gitmap merge-right ./gitmap-v17 ./gitmap-v17
+gitmap merge-right ./local https://github.com/alimtvnetwork/gitmap-v17
 
 # bypass conflict prompts: source-side wins by default
-gitmap merge-right ./gitmap-v16 ./gitmap-v16 -y
-gitmap merge-both  ./gitmap-v16 ./gitmap-v16 -y --prefer-newer
+gitmap merge-right ./gitmap-v17 ./gitmap-v17 -y
+gitmap merge-both  ./gitmap-v17 ./gitmap-v17 -y --prefer-newer
 
 # pin remote branch + preview
 gitmap merge-right ./local https://github.com/owner/repo:develop
-gitmap mv ./gitmap-v16 ./gitmap-v16 --dry-run
+gitmap mv ./gitmap-v17 ./gitmap-v17 --dry-run
 ```
 
 Conflict prompt keys: **L**eft / **R**ight / **S**kip /
@@ -1546,13 +1546,13 @@ binary build + checksum + changelog body + GitHub Release page.
 #### Windows (PowerShell)
 
 ```powershell
-irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex
 ```
 
 #### Linux / macOS
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh | sh
 ```
 
 #### Pin to an exact version
@@ -1560,13 +1560,13 @@ curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitma
 ```powershell
 # Windows — install v3.50.0 exactly, skip the "latest" lookup
 $ver = 'v3.50.0'
-$installer = irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1
+$installer = irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1
 & ([scriptblock]::Create($installer)) -Version $ver -NoDiscovery
 ```
 
 ```bash
 # Linux / macOS — install v3.50.0 exactly
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.sh \
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.sh \
   | bash -s -- --version v3.50.0 --no-discovery
 ```
 
@@ -1785,7 +1785,7 @@ Concise, grouped per version. Each entry calls out **💥 Breaking**, **✨ Enha
 
 #### v3.30.0 — 2026-04-20 — Go Report Card badge URL
 
-- 🐛 **Fixes:** README badge now points at `goreportcard.com/badge/github.com/alimtvnetwork/gitmap-v16/gitmap` (real module path) instead of the repo root, which 404'd because there is no `go.mod` at the root.
+- 🐛 **Fixes:** README badge now points at `goreportcard.com/badge/github.com/alimtvnetwork/gitmap-v17/gitmap` (real module path) instead of the repo root, which 404'd because there is no `go.mod` at the root.
 
 #### v3.28.0 — 2026-04-20 — Lucrative scan summary
 
@@ -1793,7 +1793,7 @@ Concise, grouped per version. Each entry calls out **💥 Breaking**, **✨ Enha
 
 #### v3.27.0 — 2026-04-20 — Real Go module path
 
-- 💥 **Breaking:** `go.mod` module path renamed from a placeholder to `github.com/alimtvnetwork/gitmap-v16/gitmap`. Anyone importing the module by the old path must update their import lines. CLI users are unaffected.
+- 💥 **Breaking:** `go.mod` module path renamed from a placeholder to `github.com/alimtvnetwork/gitmap-v17/gitmap`. Anyone importing the module by the old path must update their import lines. CLI users are unaffected.
 
 #### v3.26.0 — 2026-04-20 — Constants collision audit + CI guard
 
@@ -1811,7 +1811,7 @@ Concise, grouped per version. Each entry calls out **💥 Breaking**, **✨ Enha
 
 - ✨ **Enhancements:** `gitmap r` auto-registers the cwd repo in the database if it isn't tracked yet, instead of failing with "repo not found". The new repo is tagged with the current scan folder.
 
-> Versions older than v3.22 are summarized in [`CHANGELOG.md`](CHANGELOG.md). Notable jumps: **v3.21** (schema-version fast path + `db-migrate --force`), **v3.19** (bare release auto-bumps **minor** + multi-repo scan-dir release), **v3.17** (`Release.RepoId` foreign key + doctor duplicate-binary check), **v3.16** (repo renamed to `gitmap-v16`).
+> Versions older than v3.22 are summarized in [`CHANGELOG.md`](CHANGELOG.md). Notable jumps: **v3.21** (schema-version fast path + `db-migrate --force`), **v3.19** (bare release auto-bumps **minor** + multi-repo scan-dir release), **v3.17** (`Release.RepoId` foreign key + doctor duplicate-binary check), **v3.16** (repo renamed to `gitmap-v17`).
 
 ### Copy-paste workflows — scan, output, re-clone
 
@@ -1944,9 +1944,9 @@ No schema; the URL basename becomes the destination folder.
     "relativePath": "wp-onboarding"
   },
   {
-    "repoName": "gitmap-v16",
-    "httpsUrl": "https://github.com/alimtvnetwork/gitmap-v16.git",
-    "relativePath": "gitmap-v16",
+    "repoName": "gitmap-v17",
+    "httpsUrl": "https://github.com/alimtvnetwork/gitmap-v17.git",
+    "relativePath": "gitmap-v17",
     "depth": 1
   }
 ]
@@ -1961,7 +1961,7 @@ gitmap clone repos.json --target-dir D:\restored
 ```csv
 repoName,sshUrl,branch,relativePath
 wp-onboarding,git@github.com:alimtvnetwork/wp-onboarding.git,main,wp-onboarding
-gitmap-v16,git@github.com:alimtvnetwork/gitmap-v16.git,,gitmap-v16
+gitmap-v17,git@github.com:alimtvnetwork/gitmap-v17.git,,gitmap-v17
 ```
 
 ```bash

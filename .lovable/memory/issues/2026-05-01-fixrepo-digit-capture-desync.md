@@ -12,10 +12,10 @@ Test failure in `gitmap/cmd`:
 
 ```
 TestRemoteSlugRegex
-    regex "gitmap-v16" -> base="gitmap" num="12", want base="gitmap" num="9"
+    regex "gitmap-v17" -> base="gitmap" num="12", want base="gitmap" num="9"
 ```
 
-The map key `"gitmap-v16"` was expecting captured num `"9"` — internally
+The map key `"gitmap-v17"` was expecting captured num `"9"` — internally
 inconsistent.
 
 ## Root Cause
@@ -29,16 +29,16 @@ But test fixtures often store the **digit alone**, separated from the
 `-v` prefix, as the expected output of a regex capture:
 
 ```go
-"gitmap-v16": {true, "gitmap", "9"},
+"gitmap-v17": {true, "gitmap", "9"},
 //          input → matches?, expected base, expected num
 ```
 
 When fix-repo bumped this repo from v9 → v12, it correctly rewrote
-the **map key** (`"gitmap-v16"` matches `{base}-vN` → becomes
-`"gitmap-v16"`) but **did NOT touch the bare `"9"` in the value**,
+the **map key** (`"gitmap-v17"` matches `{base}-vN` → becomes
+`"gitmap-v17"`) but **did NOT touch the bare `"9"` in the value**,
 because `"9"` alone doesn't match the `{base}-vN` token shape. The
 test now asserts that the regex extracting the version number from
-`"gitmap-v16"` returns `"9"`, which is internally contradictory.
+`"gitmap-v17"` returns `"9"`, which is internally contradictory.
 
 The test stayed green for years because v1 → v2, v2 → v3, … v8 → v9
 all had the same digit width as the captured num. The first
@@ -70,7 +70,7 @@ non-`-v`-prefixed digits.
 ## Permanent Fix (next release — tracked separately)
 
 This class of bug cannot be solved by fix-repo alone — fix-repo has
-no way to know that `"9"` is semantically tied to `"gitmap-v16"`. Two
+no way to know that `"9"` is semantically tied to `"gitmap-v17"`. Two
 defenses are needed in combination:
 
 1. **Test convention**: when a test pairs a `{base}-vN` key with a

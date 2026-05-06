@@ -2,7 +2,7 @@
 
 **Status:** Draft
 **Audience:** Any AI or human implementing an installer / bootstrap script that downloads from a versioned GitHub repository.
-**Scope:** Generic. Applies to any project whose repo name ends in a `-v<N>` suffix (e.g. `gitmap-v16`, `myapp-v7`, `cli-tool-v12`).
+**Scope:** Generic. Applies to any project whose repo name ends in a `-v<N>` suffix (e.g. `gitmap-v17`, `myapp-v7`, `cli-tool-v12`).
 
 ---
 
@@ -16,7 +16,7 @@ When an installer is invoked against a versioned repo URL (e.g. `https://github.
 4. Delegate execution to **that** repo's installer script.
 5. Log every step (probe, hit, miss, choice, delegation) clearly.
 
-This guarantees a stale install URL (e.g. someone bookmarked `gitmap-v16` years ago) still pulls the user onto the latest major repo line without manual intervention.
+This guarantees a stale install URL (e.g. someone bookmarked `gitmap-v17` years ago) still pulls the user onto the latest major repo line without manual intervention.
 
 ---
 
@@ -49,7 +49,7 @@ https://github.com/<owner>/<name>-v<N>
 
 | Input URL                                          | stem        | N  |
 |----------------------------------------------------|-------------|----|
-| `https://github.com/alimtvnetwork/gitmap-v16`       | `gitmap`    | 3  |
+| `https://github.com/alimtvnetwork/gitmap-v17`       | `gitmap`    | 3  |
 | `https://github.com/acme/widgets-v12`              | `widgets`   | 12 |
 | `https://github.com/foo/bar-baz-v1`                | `bar-baz`   | 1  |
 | `https://github.com/foo/no-suffix-here`            | (no match — skip discovery, install baseline as-is) |
@@ -280,21 +280,21 @@ An implementation conforms when:
 User runs:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.sh | bash
+curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.sh | bash
 ```
 
 Discovery flow:
 
 ```
-  [discovery] baseline: alimtvnetwork/gitmap-v16
+  [discovery] baseline: alimtvnetwork/gitmap-v17
   [discovery] probe ceiling: 30
-  [discovery] HEAD https://github.com/alimtvnetwork/gitmap-v16 ... HIT
-  [discovery] HEAD https://github.com/alimtvnetwork/gitmap-v16 ... MISS (fail-fast)
-  [discovery] effective: alimtvnetwork/gitmap-v16
-  [discovery] delegating to https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.sh
+  [discovery] HEAD https://github.com/alimtvnetwork/gitmap-v17 ... HIT
+  [discovery] HEAD https://github.com/alimtvnetwork/gitmap-v17 ... MISS (fail-fast)
+  [discovery] effective: alimtvnetwork/gitmap-v17
+  [discovery] delegating to https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.sh
 ```
 
-The user transparently lands on `gitmap-v16` even though they invoked `gitmap-v16`.
+The user transparently lands on `gitmap-v17` even though they invoked `gitmap-v17`.
 
 ---
 

@@ -26,7 +26,7 @@
     contract.
 
 .EXAMPLE
-    irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/gitmap/scripts/install.ps1 | iex
+    irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/gitmap/scripts/install.ps1 | iex
 
 .EXAMPLE
     & ./install.ps1 -Version v2.48.0
@@ -35,7 +35,7 @@
     & ./install.ps1 -Version v4.1.0 -DryRun -NoDiscovery
 
 .NOTES
-    Repository: https://github.com/alimtvnetwork/gitmap-v16
+    Repository: https://github.com/alimtvnetwork/gitmap-v17
 #>
 
 param(
@@ -98,7 +98,7 @@ try {
     if ($PSStyle) { $PSStyle.OutputRendering = 'PlainText' }
 } catch {}
 
-$Repo = "alimtvnetwork/gitmap-v16"
+$Repo = "alimtvnetwork/gitmap-v17"
 $BinaryName = "gitmap.exe"
 $InstallerVersion = "1.0.0"
 
@@ -573,7 +573,7 @@ function Install-Binary([string]$zipPath, [string]$installDir) {
     New-Item -ItemType Directory -Path $extractDir -Force | Out-Null
     Expand-Archive -Path $zipPath -DestinationPath $extractDir -Force
 
-    # Match exact names OR versioned patterns like gitmap-v16.54.6-windows-amd64.exe
+    # Match exact names OR versioned patterns like gitmap-v17.54.6-windows-amd64.exe
     $candidateNames = @(
         $BinaryName,
         [System.IO.Path]::GetFileNameWithoutExtension($BinaryName),

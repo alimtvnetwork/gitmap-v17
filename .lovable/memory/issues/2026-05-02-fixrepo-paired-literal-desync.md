@@ -11,9 +11,9 @@ After bumping v12 → v13 and running `fix-repo --all`:
 
 ```
 --- FAIL: TestBuildAuditNeedlesWidthCrossing
-    replaceaudit_test.go:63: needle[6] = "gitmap-v16", want "gitmap-v16"
+    replaceaudit_test.go:63: needle[6] = "gitmap-v17", want "gitmap-v17"
 --- FAIL: TestRemoteSlugRegex
-    replaceversionparse_test.go:57: regex "gitmap-v16" -> base="gitmap" num="13", want base="gitmap" num="12"
+    replaceversionparse_test.go:57: regex "gitmap-v17" -> base="gitmap" num="13", want base="gitmap" num="12"
 ```
 
 Both failures present the same shape: the `{base}-vN` token half of a paired literal got rewritten, but the **bare digit half** (`"12"` in a sibling slice element / `12` in a `[]int` literal) did not.
@@ -26,7 +26,7 @@ But test fixtures in `gitmap/cmd/replaceaudit_test.go` and `gitmap/cmd/replaceve
 
 ```go
 // replaceversionparse_test.go (BROKEN)
-"gitmap-v16": {true, "gitmap", "12"},   // ← "12" was the captured num for v12
+"gitmap-v17": {true, "gitmap", "12"},   // ← "12" was the captured num for v12
 ```
 
 ```go
@@ -34,11 +34,11 @@ But test fixtures in `gitmap/cmd/replaceaudit_test.go` and `gitmap/cmd/replaceve
 got := buildAuditNeedles("gitmap", []int{8, 9, 10, 12})  // ← 12 stays
 want := []string{
     ...
-    "gitmap-v16", "gitmap/v12",  // ← only "gitmap-v16" got bumped
+    "gitmap-v17", "gitmap/v12",  // ← only "gitmap-v17" got bumped
 }
 ```
 
-When fix-repo rewrites `gitmap-v16` → `gitmap-v16`, the sibling `"12"` / `12` remains, leaving an internally inconsistent test that fails on the next `go test` run.
+When fix-repo rewrites `gitmap-v17` → `gitmap-v17`, the sibling `"12"` / `12` remains, leaving an internally inconsistent test that fails on the next `go test` run.
 
 This is the **same root class** as the v4.12.0 fix:
 - v4.12.0 fix was for a `[]int` digit capture next to a `{base}-vN` map key.
@@ -91,6 +91,6 @@ The Go-native rewriter (`gitmap fix-repo`) already has `--strict` mode which run
 
 1. Many users / CI flows still call the PowerShell / shell scripts directly (legacy entry points kept for cross-platform parity).
 2. `--strict` runs `go test` which is expensive; the paired-literal audit is a 2-line regex grep that runs in microseconds.
-3. The audit gives a precise diagnostic (`paired-literal desync at file:line: 'gitmap-v16' followed by sibling '12'`) instead of a downstream test failure.
+3. The audit gives a precise diagnostic (`paired-literal desync at file:line: 'gitmap-v17' followed by sibling '12'`) instead of a downstream test failure.
 
 So we fix it at both layers: strict-mode tests + cheap paired-literal audit.

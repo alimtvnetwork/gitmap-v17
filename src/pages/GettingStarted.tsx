@@ -16,14 +16,14 @@ const GettingStartedPage = () => {
             Build from source using Go 1.21+:
           </p>
           <CodeBlock
-            code={`go install github.com/alimtvnetwork/gitmap-v16/gitmap@latest`}
+            code={`go install github.com/alimtvnetwork/gitmap-v17/gitmap@latest`}
             title="Terminal"
           />
           <p className="text-sm text-muted-foreground mt-2">
             Or clone the repo and build with the platform-appropriate script:
           </p>
-          <CodeBlock code={`# Windows (PowerShell)\ngit clone https://github.com/alimtvnetwork/gitmap-v16/gitmap.git\ncd gitmap\n./run.ps1`} title="PowerShell" language="powershell" />
-          <CodeBlock code={`# Linux / macOS (Bash)\ngit clone https://github.com/alimtvnetwork/gitmap-v16/gitmap.git\ncd gitmap\nchmod +x run.sh\n./run.sh`} title="Bash" language="bash" />
+          <CodeBlock code={`# Windows (PowerShell)\ngit clone https://github.com/alimtvnetwork/gitmap-v17/gitmap.git\ncd gitmap\n./run.ps1`} title="PowerShell" language="powershell" />
+          <CodeBlock code={`# Linux / macOS (Bash)\ngit clone https://github.com/alimtvnetwork/gitmap-v17/gitmap.git\ncd gitmap\nchmod +x run.sh\n./run.sh`} title="Bash" language="bash" />
           <CodeBlock code={`# Or use Make (requires run.sh)\ncd gitmap\nmake build`} title="Makefile" language="bash" />
 
           <div className="mt-4 p-4 rounded-lg border border-border bg-muted/30">

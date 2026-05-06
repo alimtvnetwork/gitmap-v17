@@ -73,11 +73,11 @@ The path is also printed once on every `gitmap update` run via `→ Handoff log 
 
 ### Example 3: Update with custom repo path
 
-    gitmap update --repo-path C:\Projects\gitmap-v16
+    gitmap update --repo-path C:\Projects\gitmap-v17
 
 **Output:**
 
-    → Repo path: C:\Projects\gitmap-v16
+    → Repo path: C:\Projects\gitmap-v17
     ■ Pulling latest source...
     ■ Building gitmap.exe...
     ✓ Updated to v2.49.1
@@ -127,12 +127,12 @@ The path is also printed once on every `gitmap update` run via `→ Handoff log 
         irm https://raw.githubusercontent.com/.../install.ps1 | iex
 
       Option 2 — Clone the repo and build from source:
-        git clone https://github.com/.../gitmap-v16.git C:\gitmap-src
+        git clone https://github.com/.../gitmap-v17.git C:\gitmap-src
         cd C:\gitmap-src
         .\run.ps1
 
       Option 3 — Download the latest release manually:
-        https://github.com/.../gitmap-v16/releases/latest
+        https://github.com/.../gitmap-v17/releases/latest
 
       Option 4 — Use --repo-path to specify it manually:
         gitmap update --repo-path C:\gitmap-src

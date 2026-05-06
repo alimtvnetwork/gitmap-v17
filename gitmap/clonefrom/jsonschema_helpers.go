@@ -9,7 +9,7 @@ package clonefrom
 // output without an ordered-map dependency — and (b) the tree shape
 // per JSON-Schema draft 2020-12 maps cleanly to dynamic objects.
 
-import "github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+import "github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 
 // propKV pairs a property name with its sub-schema. Used purely as
 // an argument-passing convenience for orderedProps; the resulting

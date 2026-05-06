@@ -6,9 +6,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/walk"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/workspace"
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/walk"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/cmd/commitin/workspace"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // executePipeline performs the per-input walk + replay loop. Returns

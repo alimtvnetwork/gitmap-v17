@@ -1087,8 +1087,8 @@ jobs:
         run: bash .github/scripts/check-cmd-naming.sh gitmap/cmd
 
   legacy-refs-check:
-    # Fails the build if any legacy version string (gitmap-v16, gitmap-v16, # gitmap-legacy-ref-allow
-    # gitmap-v16) leaks back into the repo after the v8 rename. Mirrors # gitmap-legacy-ref-allow
+    # Fails the build if any legacy version string (gitmap-v17, gitmap-v17, # gitmap-legacy-ref-allow
+    # gitmap-v17) leaks back into the repo after the v8 rename. Mirrors # gitmap-legacy-ref-allow
     # the local `gitmap audit-legacy` command but runs without the Go
     # toolchain so it gates EVERY CI run, including remixes that haven't
     # built yet. Lines containing the literal `gitmap-legacy-ref-allow`
@@ -2020,7 +2020,7 @@ jobs:
         working-directory: gitmap
         run: |
           VERSION="dev-${GITHUB_SHA::10}"
-          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v16/gitmap/constants.Version=$VERSION'"
+          LDFLAGS="-s -w -X 'github.com/alimtvnetwork/gitmap-v17/gitmap/constants.Version=$VERSION'"
           OUTPUT="gitmap-${VERSION}-${{ matrix.os }}-${{ matrix.arch }}${{ matrix.ext }}"
           echo "Building $OUTPUT..."
           CGO_ENABLED=0 GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -ldflags "$LDFLAGS" -o "$OUTPUT" .

@@ -12,12 +12,12 @@ const INSTALL_TABS = [
   {
     label: "Windows",
     command:
-      "irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.ps1 | iex",
+      "irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.ps1 | iex",
   },
   {
     label: "Linux / macOS",
     command:
-      "curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/install-quick.sh | bash",
+      "curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/install-quick.sh | bash",
   },
 ];
 
@@ -25,12 +25,12 @@ const UNINSTALL_TABS = [
   {
     label: "Windows",
     command:
-      "irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/uninstall-quick.ps1 | iex",
+      "irm https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/uninstall-quick.ps1 | iex",
   },
   {
     label: "Linux / macOS",
     command:
-      "curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v16/main/uninstall-quick.sh | bash",
+      "curl -fsSL https://raw.githubusercontent.com/alimtvnetwork/gitmap-v17/main/uninstall-quick.sh | bash",
   },
 ];
 

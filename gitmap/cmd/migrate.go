@@ -1,7 +1,7 @@
 // Package cmd — migrate.go handles automatic migration of legacy directories.
 package cmd
 
-import "github.com/alimtvnetwork/gitmap-v16/gitmap/localdirs"
+import "github.com/alimtvnetwork/gitmap-v17/gitmap/localdirs"
 
 // migrateLegacyDirs moves old directories into .gitmap/ if found.
 func migrateLegacyDirs() {

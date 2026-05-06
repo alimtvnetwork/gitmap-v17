@@ -12,7 +12,7 @@ import (
 
 	"github.com/mholt/archives"
 
-	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
+	"github.com/alimtvnetwork/gitmap-v17/gitmap/constants"
 )
 
 // ExtractResult is what a compact-extract returns to the caller so it can
