@@ -51,10 +51,10 @@ func TestWalkFirstParentEmptyRepoReturnsNilSlice(t *testing.T) {
 	}
 }
 
-// errSentinelEmpty mimics a git non-zero exit so isEmptyRepoError fires.
-type errSentinelEmpty struct{}
+// sentinelEmptyError mimics a git non-zero exit so isEmptyRepoError fires.
+type sentinelEmptyError struct{}
 
-func (errSentinelEmpty) Error() string { return "exit status 128" }
+func (sentinelEmptyError) Error() string { return "exit status 128" }
 
 // fakeRunner returns canned output for the three commands the walker
 // issues. SHAs are 3-char placeholders to keep the test compact.

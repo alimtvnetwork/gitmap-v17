@@ -70,8 +70,8 @@ func TestSaveToDiskRefusesOverwrite(t *testing.T) {
 
 func TestLoadFromDiskMissing(t *testing.T) {
 	_, err := LoadFromDisk(t.TempDir(), "Nope")
-	le, ok := err.(*LoadError)
-	if !ok || le.Reason != "not found" {
+	var le *LoadError
+	if !errors.As(err, &le) || le.Reason != "not found" {
 		t.Fatalf("want LoadError not-found, got %v", err)
 	}
 }

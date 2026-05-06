@@ -15,7 +15,6 @@ type enumExpect struct {
 	name    string
 	got     []string
 	want    []string
-	allKind string
 }
 
 func TestCommitInEnumsMatchSpec(t *testing.T) {

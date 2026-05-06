@@ -87,10 +87,10 @@ func shapeToProfile(s *jsonShape) *Profile {
 		p.Author = &Author{Name: s.Author.Name, Email: s.Author.Email}
 	}
 	for _, e := range s.Exclusions {
-		p.Exclusions = append(p.Exclusions, Exclusion{Kind: e.Kind, Value: e.Value})
+		p.Exclusions = append(p.Exclusions, Exclusion(e))
 	}
 	for _, r := range s.MessageRules {
-		p.MessageRules = append(p.MessageRules, MessageRule{Kind: r.Kind, Value: r.Value})
+		p.MessageRules = append(p.MessageRules, MessageRule(r))
 	}
 	return p
 }
@@ -118,10 +118,10 @@ func profileToShape(p *Profile) *jsonShape {
 		s.SchemaVersion = CurrentSchemaVersion
 	}
 	for _, e := range p.Exclusions {
-		s.Exclusions = append(s.Exclusions, jsonKV{Kind: e.Kind, Value: e.Value})
+		s.Exclusions = append(s.Exclusions, jsonKV(e))
 	}
 	for _, r := range p.MessageRules {
-		s.MessageRules = append(s.MessageRules, jsonKV{Kind: r.Kind, Value: r.Value})
+		s.MessageRules = append(s.MessageRules, jsonKV(r))
 	}
 	if s.Exclusions == nil {
 		s.Exclusions = []jsonKV{}
