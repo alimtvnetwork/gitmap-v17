@@ -62,11 +62,13 @@ func TestSiblingDiscovery_TailKeywordTruncatesToLastN(t *testing.T) {
 	requireOneTerminalRun(t, res)
 }
 
-// TestSiblingDiscovery_ZeroSiblingsFailsBadArgs proves the negative
-// path: when the source has no versioned neighbors, `all` must exit
-// with CommitInExitBadArgs instead of silently producing an empty
-// run. This locks in the spec §2.4 "matched zero siblings" contract.
-func TestSiblingDiscovery_ZeroSiblingsFailsBadArgs(t *testing.T) {
+// TestSiblingDiscovery_ZeroSiblingsFailsInputUnusable proves the
+// negative path: when the source has no versioned neighbors, `all`
+// must exit with CommitInExitInputUnusable (the orchestrator maps
+// the keyword-expansion failure to the input-stage exit code) AND
+// the stderr/stdout must surface the spec §2.4 "matched zero
+// siblings" message so the user can act on it.
+func TestSiblingDiscovery_ZeroSiblingsFailsInputUnusable(t *testing.T) {
 	source := NewRepoBuilder(t)
 	source.SeedCommit("README.md", "lonely\n", "lonely: initial")
 
@@ -78,10 +80,26 @@ func TestSiblingDiscovery_ZeroSiblingsFailsBadArgs(t *testing.T) {
 	}
 	res := RunHarness(t, raw, source.Dir())
 
-	if res.ExitCode != constants.CommitInExitBadArgs {
-		t.Fatalf("exit = %d, want %d (BadArgs)\n--- stderr\n%s\n--- stdout\n%s",
-			res.ExitCode, constants.CommitInExitBadArgs, res.Stderr, res.Stdout)
+	if res.ExitCode != constants.CommitInExitInputUnusable {
+		t.Fatalf("exit = %d, want %d (InputUnusable)\n--- stderr\n%s\n--- stdout\n%s",
+			res.ExitCode, constants.CommitInExitInputUnusable, res.Stderr, res.Stdout)
 	}
+	combined := res.Stdout + res.Stderr
+	if !contains(combined, "matched zero siblings") {
+		t.Fatalf("missing zero-siblings diagnostic in output:\n%s", combined)
+	}
+}
+
+// contains is a tiny strings.Contains alias so the assertion above
+// reads naturally without forcing every test file to import strings
+// just for one call site.
+func contains(haystack, needle string) bool {
+	for i := 0; i+len(needle) <= len(haystack); i++ {
+		if haystack[i:i+len(needle)] == needle {
+			return true
+		}
+	}
+	return false
 }
 
 // buildSiblingTree materializes a real on-disk tree of one source repo
