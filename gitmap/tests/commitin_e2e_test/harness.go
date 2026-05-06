@@ -8,6 +8,7 @@ import (
 
 	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin"
 	"github.com/alimtvnetwork/gitmap-v16/gitmap/cmd/commitin/orchestrator"
+	"github.com/alimtvnetwork/gitmap-v16/gitmap/constants"
 
 	_ "modernc.org/sqlite" // commit-in opens the workspace DB via this driver
 )
@@ -42,12 +43,12 @@ func RunHarness(t *testing.T, raw *commitin.RawArgs, repoDir string) RunResult {
 	}
 }
 
-// workspaceDBPath mirrors workspace.Paths.DB() so assertion code can
+// workspaceDBPath mirrors workspace.buildPaths so assertion code can
 // reach the SQLite file without importing the workspace package
 // (which would create a cycle for fixtures that live under that
-// package's test taxonomy).
+// package's test taxonomy). Layout: <source>/.gitmap/<DBFile>.
 func workspaceDBPath(repoDir string) string {
-	return filepath.Join(repoDir, ".gitmap", "commit-in", "commit-in.db")
+	return filepath.Join(repoDir, constants.GitMapDir, constants.DBFile)
 }
 
 // OpenWorkspaceDB opens the on-disk SQLite the orchestrator wrote to.
@@ -55,7 +56,7 @@ func workspaceDBPath(repoDir string) string {
 // Caller must defer db.Close().
 func OpenWorkspaceDB(t *testing.T, path string) *sql.DB {
 	t.Helper()
-	db, err := sql.Open("sqlite", "file:"+path+"?mode=ro&_pragma=busy_timeout(2000)")
+	db, err := sql.Open("sqlite", path)
 	if err != nil {
 		t.Fatalf("open workspace db %s: %v", path, err)
 	}
