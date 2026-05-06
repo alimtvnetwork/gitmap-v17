@@ -26,9 +26,9 @@ type RawArgs struct {
 	AuthorName  string
 	AuthorEmail string
 
-	ConflictMode string // ConflictMode enum literal; empty = unset
-	Exclude      []string
-	MessageRules []MessageRuleArg
+	ConflictMode  string // ConflictMode enum literal; empty = unset
+	Exclude       []string
+	MessageRules  []MessageRuleArg
 	MessagePrefix []string
 	MessageSuffix []string
 	TitlePrefix   string

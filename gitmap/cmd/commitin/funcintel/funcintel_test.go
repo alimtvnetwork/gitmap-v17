@@ -9,12 +9,12 @@ import (
 
 func TestLanguageForPath(t *testing.T) {
 	cases := map[string]string{
-		"src/foo.go":     constants.CommitInLanguageGo,
-		"a/b/c.TS":       constants.CommitInLanguageTypeScript,
-		"a.tsx":          constants.CommitInLanguageTypeScript,
-		"a.mjs":          constants.CommitInLanguageJavaScript,
-		"a.unknown":      "",
-		"NoExt":          "",
+		"src/foo.go": constants.CommitInLanguageGo,
+		"a/b/c.TS":   constants.CommitInLanguageTypeScript,
+		"a.tsx":      constants.CommitInLanguageTypeScript,
+		"a.mjs":      constants.CommitInLanguageJavaScript,
+		"a.unknown":  "",
+		"NoExt":      "",
 	}
 	for path, want := range cases {
 		if got := LanguageForPath(path); got != want {

@@ -30,11 +30,11 @@ type Result struct {
 
 // ApplyCommit performs spec §3.1 stage 14 (`Commit`) using git
 // plumbing so we can pin BOTH dates to RFC3339 strings. Steps:
-//   1. For each file in Plan.Files, copy its blob @ SourceSha into the
-//      target's index using `git update-index --add --cacheinfo`.
-//   2. `git write-tree` to materialize the index.
-//   3. `git commit-tree <tree> -p <HEAD?>` with both date env vars set.
-//   4. `git update-ref HEAD <newSha>`.
+//  1. For each file in Plan.Files, copy its blob @ SourceSha into the
+//     target's index using `git update-index --add --cacheinfo`.
+//  2. `git write-tree` to materialize the index.
+//  3. `git commit-tree <tree> -p <HEAD?>` with both date env vars set.
+//  4. `git update-ref HEAD <newSha>`.
 //
 // dryRun=true short-circuits before any mutation; Result.NewSha = "".
 func ApplyCommit(p Plan, dryRun bool) (Result, error) {
