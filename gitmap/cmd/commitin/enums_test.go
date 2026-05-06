@@ -12,9 +12,9 @@ import (
 // update the spec, the constants_commitin.go enum block, the typed
 // enum in enums.go, AND this table — in the same commit.
 type enumExpect struct {
-	name    string
-	got     []string
-	want    []string
+	name string
+	got  []string
+	want []string
 }
 
 func TestCommitInEnumsMatchSpec(t *testing.T) {

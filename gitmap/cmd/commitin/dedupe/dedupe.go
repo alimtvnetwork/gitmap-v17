@@ -11,8 +11,8 @@ import (
 // Verdict describes the outcome of a single ShaMap lookup. Maps to
 // spec §3.1 stage 10 (`DedupeCheck`).
 type Verdict struct {
-	IsHit                bool  // true when SourceSha already in ShaMap
-	PreviousRewrittenId  int64 // populated only when IsHit
+	IsHit               bool  // true when SourceSha already in ShaMap
+	PreviousRewrittenId int64 // populated only when IsHit
 }
 
 // Lookup queries ShaMap for sourceSha. A miss returns (Verdict{}, nil)

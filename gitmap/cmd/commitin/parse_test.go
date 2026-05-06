@@ -86,9 +86,9 @@ func TestParseMissingPositionals(t *testing.T) {
 // Author flags must be supplied as a pair (both or neither) per §2.5.
 func TestParseAuthorPair(t *testing.T) {
 	cases := []struct {
-		name   string
-		argv   []string
-		ok     bool
+		name string
+		argv []string
+		ok   bool
 	}{
 		{"both", []string{"--author-name", "Jane", "--author-email", "j@x.io", "src", "a"}, true},
 		{"neither", []string{"src", "a"}, true},
